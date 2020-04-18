@@ -16,5 +16,11 @@ export class ApiService {
     return this.http.get(`https://breakingbadapi.com/api/episodes/${id}`);
   }
 
-  
+   getCharacters() {
+    return this.http.get('https://www.breakingbadapi.com/api/characters');
+  }
+ 
+  getCharacter(id) {
+    return this.http.get(`https://www.breakingbadapi.com/api/character/${id}`);
+  }
 }
