@@ -34,7 +34,7 @@ const routes: Routes = [
             },
             {
                 path: 'quotes',
-                children: [
+                          children: [
                     {
                         path: '',
                         loadChildren: () => import('../quotes/quotes.module').then(m => m.QuotesPageModule)

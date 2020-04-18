@@ -16,30 +16,28 @@ export class CharacterDetailsPage implements OnInit {
 
     constructor(private activatedRoute: ActivatedRoute, private api: ApiService, private favouriteService: FavouriteService) { }
 
-    ngOnInit() {
+  ngOnInit() {
 
-        this.characterId = this.activatedRoute.snapshot.paramMap.get('id');
+    this.characterId = this.activatedRoute.snapshot.paramMap.get('id');
 
-        this.api.getCharacter(this.characterId).subscribe(res => {
-            this.character = res[0];
-            console.log(JSON.stringify(this.character.char_id));
-        });
-
-        this.favouriteService.isFavourite(this.characterId).then(isFav => {
-            this.isFavourite = isFav;
-        });
-    }
-
-    favouriteCharacter() {
-        this.favouriteService.favouriteCharacter(this.characterId).then(() => {
-            this.isFavourite = true;
-        });
-    }
-
-    unfavouriteCharacter() {
-        this.favouriteService.unfavouriteEpisode(this.characterId).then(() => {
-            this.isFavourite = false;
-        });
-    }
+    this.api.getCharacter(this.characterId).subscribe(res => {
+      this.character = res[0];
+    });
+    this.favouriteService.isFavourite(this.characterId).then(isFav => {
+      this.isFavourite = isFav;
+    });
+  }
+ 
+  favouriteCharacter() {
+    this.favouriteService.favouriteCharacter(this.characterId).then(() => {
+      this.isFavourite = true;
+    });
+  }
+ 
+  unfavouriteCharacter() {
+    this.favouriteService.unfavouriteCharacter(this.characterId).then(() => {
+      this.isFavourite = false;
+    });
+  }
 
 }
