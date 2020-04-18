@@ -1,4 +1,5 @@
 <ion-header>
+<!-- changing color of the bar to medium - gray-->
   <ion-toolbar color="medium">
     <ion-title>Episodes</ion-title>
   </ion-toolbar>
@@ -8,6 +9,7 @@
   
   
   <ion-list>
+  <!--function to bring episode attributes from the url-->
     <ion-item button detail lines="inset" 
     *ngFor="let episode of episodes | async" 
     (click)="openDetails(episode)">

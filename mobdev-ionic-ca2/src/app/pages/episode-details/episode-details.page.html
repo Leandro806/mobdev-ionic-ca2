@@ -1,13 +1,17 @@
 <ion-header>
+<!-- changing color of the bar to medium - gray-->
 	<ion-toolbar color="medium">
 		<ion-buttons slot="start">
+        <!-- Back button function-->
 			<ion-back-button defaulthref="/tabs/episodes"></ion-back-button>
 		</ion-buttons>
 		<ion-title>Episodes Details</ion-title>
 		<ion-buttons slot="end">
+        <!--function to unfavourite a specific character-->
 			<ion-button (click)="unfavouriteEpisode()" *ngIf="isFavourite">
 				<ion-icon name="star" slot="icon-only"></ion-icon>
 			</ion-button>
+            <!--function to favourite (flag the star) a specific character-->
 			<ion-button (click)="favouriteEpisode()" *ngIf="!isFavourite">
 				<ion-icon name="star-outline" slot="icon-only"></ion-icon>
 			</ion-button>
