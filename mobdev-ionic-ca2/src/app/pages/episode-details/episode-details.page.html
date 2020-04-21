@@ -23,9 +23,31 @@
 
 	<ion-card *ngIf="episode">
 		<ion-card-content>
-			{{ episode.title }}
-            {{ episode.season }}
-            {{ episode.characters }}
+		{{ episode.title }}
+           	</ion-card-content>
+	</ion-card>
+
+<ion-card *ngIf="episode">
+		<ion-card-content>
+	      {{ episode.season }}
+          	</ion-card-content>
+	</ion-card>
+
+<ion-card *ngIf="episode">
+		<ion-card-content>
+	      {{ episode.episode }}
+          	</ion-card-content>
+	</ion-card>
+
+<ion-card *ngIf="episode">
+		<ion-card-content>
+	       {{ episode.air_date }}
+		</ion-card-content>
+	</ion-card>
+
+<ion-card *ngIf="episode">
+		<ion-card-content>
+	       {{ episode.characters }}
 		</ion-card-content>
 	</ion-card>
 
