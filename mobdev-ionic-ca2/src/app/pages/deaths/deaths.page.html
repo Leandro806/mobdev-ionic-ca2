@@ -1,5 +1,4 @@
 <ion-header>
-<!-- changing color of the bar to medium - gray-->
 	<ion-toolbar color="medium">
 		<ion-title>Deaths</ion-title>
 	</ion-toolbar>
@@ -8,16 +7,10 @@
 <ion-content>
 	<ion-searchbar [(ngModel)]="terms"></ion-searchbar>
 
-	<ion-card *ngIf="death">
-		<ion-card-content>
-			<h3>Death Count: {{ death.death-count }} </h3>
-		</ion-card-content>
-	</ion-card>
-
-<ion-card *ngIf="death">
-		<ion-card-content>
-			<h3>Death Count: {{ death.episode }} </h3>
-		</ion-card-content>
+	<ion-card>
+		<ion-item button detail lines="inset" *ngFor="let death of deaths | async" (click)="openDetails(deaths)">
+		  <h3>{{ death.death }}</h3>
+		</ion-item>
 	</ion-card>
 
 </ion-content>

@@ -35,7 +35,10 @@ export class ApiService {
     }
 /**GET number of deaths reletad to a character from outside source*/
     getDeaths() {
-        return this.http.get('https://www.breakingbadapi.com/api/death-count');
+        return this.http.get('https://www.breakingbadapi.com/api/deaths');
+    }
+    getDeath(id) {
+        return this.http.get('https://www.breakingbadapi.com/api/deaths');
     }
 
 }
