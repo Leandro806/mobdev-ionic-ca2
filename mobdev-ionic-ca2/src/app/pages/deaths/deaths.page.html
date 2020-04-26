@@ -8,7 +8,11 @@
 	<ion-searchbar [(ngModel)]="terms"></ion-searchbar>
 
 	<ion-card>
+<<<<<<< HEAD
 		<ion-item color="#ffd534" button detail lines="inset" *ngFor="let death of deaths | async" (click)="openDetails(deaths)">
+=======
+		<ion-item button detail lines="inset" *ngFor="let death of deaths | async" (click)="openDetails(deaths)">
+>>>>>>> e32ed11d6dd4ea08766b06ee0a219b1a47ec3858
 		  {{ death.death }}
 		</ion-item>
 	</ion-card>
