@@ -5,12 +5,12 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content pading class="background" >
   
 
   <ion-list>
   <!--function to bring character attributes from the url-->
-    <ion-item button detail lines="inset" 
+    <ion-item color="#ffd534" button detail lines="inset" 
     *ngFor="let character of characters | async" 
     (click)="openDetails(character)">
       {{ character.name }}

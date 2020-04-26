@@ -4,11 +4,11 @@
 	</ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content pading class="background">
 	<ion-searchbar [(ngModel)]="terms"></ion-searchbar>
 
 	<ion-card>
-		<ion-item button detail lines="inset" *ngFor="let death of deaths | async" (click)="openDetails(deaths)">
+		<ion-item color="#ffd534" button detail lines="inset" *ngFor="let death of deaths | async" (click)="openDetails(deaths)">
 		  {{ death.death }}
 		</ion-item>
 	</ion-card>

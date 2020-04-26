@@ -19,33 +19,33 @@
 	</ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content pading class="background">
 
-	<ion-card *ngIf="episode">
-		<ion-card-content>
+	<ion-card color="#ffd534" *ngIf="episode">
+		<ion-card-content >
 		<h4>Title: {{ episode.title }}</h4>
            	</ion-card-content>
 	</ion-card>
 
-<ion-card *ngIf="episode">
+<ion-card color="#ffd534" *ngIf="episode">
 		<ion-card-content>
 	     <h4> Season: {{ episode.season }}</h4>
           	</ion-card-content>
 	</ion-card>
 
-<ion-card *ngIf="episode">
+<ion-card color="#ffd534" *ngIf="episode">
 		<ion-card-content>
 	     <h4> Episode number: {{ episode.episode }}</h4>
           	</ion-card-content>
 	</ion-card>
 
-<ion-card *ngIf="episode">
+<ion-card color="#ffd534" *ngIf="episode">
 		<ion-card-content>
 	      <h4> Date: {{ episode.air_date }}</h4>
 		</ion-card-content>
 	</ion-card>
 
-<ion-card *ngIf="episode">
+<ion-card color="#ffd534" *ngIf="episode">
 		<ion-card-content>
 	      <h4> Starring: {{ episode.characters }}</h4>
 		</ion-card-content>

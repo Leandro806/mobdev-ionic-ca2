@@ -5,13 +5,13 @@
 	</ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content pading class="background">
         <!--Search function-->
 	<ion-searchbar [(ngModel)]="terms"></ion-searchbar>
 
   <ion-list>
   <!--function to bring a quote attribute from the url-->
-    <ion-item button detail lines="inset" 
+    <ion-item color="#ffd534" button detail lines="inset" 
     *ngFor="let quote of quotes | async" 
     (click)="openDetails(quote)">
       <h5>Quote {{quote.quote_id}}: {{ quote.quote}}</h5>
