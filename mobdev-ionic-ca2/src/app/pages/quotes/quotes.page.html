@@ -14,7 +14,8 @@
     <ion-item button detail lines="inset" 
     *ngFor="let quote of quotes | async" 
     (click)="openDetails(quote)">
-      {{ quote.series}}
+      <h5>Quote {{quote.quote_id}}: {{ quote.quote}}</h5>
+      
     </ion-item>
   </ion-list>
 </ion-content>
