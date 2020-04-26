@@ -9,7 +9,7 @@
 
 	<ion-card>
 		<ion-item button detail lines="inset" *ngFor="let death of deaths | async" (click)="openDetails(deaths)">
-		  <h3>{{ death.death }}</h3>
+		  {{ death.death }}
 		</ion-item>
 	</ion-card>
 

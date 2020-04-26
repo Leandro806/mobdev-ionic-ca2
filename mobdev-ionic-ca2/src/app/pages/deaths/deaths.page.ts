@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { ApiService } from '../../services/api.service';
+import { DeathsDetailsPage } from '../deaths-details/deaths-details.page';
 
 @Component({
     selector: 'app-deaths',
@@ -21,7 +22,7 @@ export class DeathsPage implements OnInit {
             });
     }
     openDetails(deaths) {
-        let deathCount = deaths.deathCount;        
-        this.router.navigateByUrl(`/tabs/deaths/${deathCount}`);
+        let deathId = deaths.deathId;        
+        this.router.navigateByUrl(`/tabs/deaths/${deathId}`);
     }
 }

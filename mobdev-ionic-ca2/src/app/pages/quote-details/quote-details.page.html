@@ -5,6 +5,7 @@
       <ion-back-button defaulthref="/tabs/quotes"></ion-back-button>
     </ion-buttons>
     <ion-title>Quote Details</ion-title>
+    
   </ion-toolbar>
 </ion-header>
 
@@ -12,16 +13,15 @@
 
 	<ion-card *ngIf="quote">
 		<ion-card-content>
-			{{ quote.author }}
-            
-            
+			<h4>Author of the quote: {{ quote.author }} </h4>
 		</ion-card-content>
 	</ion-card>
 
     <ion-card *ngIf="quote">
 		<ion-card-content>
-			<h3>Quote: {{ quote.quote }} </h3>
+			<h4> Serie: {{ quote.series}} </h4>
 		</ion-card-content>
 	</ion-card>
 
+  
 </ion-content>
